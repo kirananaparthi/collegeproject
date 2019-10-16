@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <a href="/demo/"><input type="submit" value="home"></a>
+        <form action="/studen23/" method="POST">
+            {%csrf_token%}
+                  branch:
+            <select name="sele">
+                    <option value="eee">eee</option>
+                    <option value="ece">ece</option>
+                    <option value="mech">mech</option>
+                    <option value="civil">civil</option>
+                    <option value="cse">cse</option>
+            </select>
+            year:<input type="text" name="yar">
+            <input type="submit" value="search">
+            
+        </form>
+    
+        {% for up in m%}
+        name:{{up.name}}<br>
+        Address:{{up.address}}<br>
+       {%endfor%}
+</body>
+</html>
